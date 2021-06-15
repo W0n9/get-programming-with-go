@@ -8,6 +8,6 @@ func main() {
 	fmt.Printf("%v\n", third)
 	fmt.Printf("%f\n", third)
 	fmt.Printf("%.3f\n", third)
-	fmt.Printf("%4.2f\n", third)
+	fmt.Printf("%5.2f\n", third)
 	fmt.Printf("%05.2f\n", third)
 }

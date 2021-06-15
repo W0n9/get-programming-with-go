@@ -9,8 +9,13 @@ func celsiusToKelvin(c celsius) kelvin {
 	return kelvin(c + 273.15)
 }
 
+func (c celsius) kelvin() kelvin {
+	return kelvin(c + 273.15)
+}
+
 func main() {
 	var c celsius = 127.0
-	k := celsiusToKelvin(c)
+	// k := celsiusToKelvin(c)
+	k := c.kelvin()
 	fmt.Print(c, "º C is ", k, "º K")
 }

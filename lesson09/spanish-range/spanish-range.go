@@ -9,6 +9,6 @@ func main() {
 		fmt.Printf("%v %c\n", i, c)
 	}
 	for _, c := range question {
-		fmt.Printf("%c ", c)
+		fmt.Printf("%c", c)
 	}
 }

@@ -11,6 +11,6 @@ func main() {
 		"Jupiter", "Saturn", "Uranus", "Neptune",
 	}
 
-	sort.StringSlice(planets).Sort()
+	sort.Strings(planets)
 	fmt.Println(planets)
 }

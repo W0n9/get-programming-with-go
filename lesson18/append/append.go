@@ -9,4 +9,5 @@ func main() {
 	fmt.Println(dwarfs)
 	dwarfs = append(dwarfs, "Salacia", "Quaoar", "Sedna")
 	fmt.Println(dwarfs)
+	fmt.Println(len(dwarfs))
 }

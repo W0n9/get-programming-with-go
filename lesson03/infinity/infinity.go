@@ -14,7 +14,7 @@ func main() {
 		degrees++
 		if degrees >= 360 {
 			degrees = 0
-			if rand.Intn(2) == 0 {
+			if rand.Intn(2) == 0 { //	1/2机率触发
 				break
 			}
 		}

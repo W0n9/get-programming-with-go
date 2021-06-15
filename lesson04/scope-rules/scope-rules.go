@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 var era = "AD"
 
 func main() {
-	year := 2018
-
+	year := 2021
+	rand.Seed(time.Now().Unix())
 	switch month := rand.Intn(12) + 1; month {
 	case 2:
 		day := rand.Intn(28) + 1
