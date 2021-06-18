@@ -97,6 +97,7 @@ func Step(a, b Universe) {
 }
 
 func main() {
+	rand.Seed(time.Now().Unix())
 	a, b := NewUniverse(), NewUniverse()
 	a.Seed()
 
