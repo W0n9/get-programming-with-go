@@ -29,5 +29,5 @@ func main() {
 	t := temperature{high: -1.0, low: -78.0}
 	fmt.Printf("average %vº C\n", t.average())
 	report := report{sol: 15, temperature: t}
-	fmt.Printf("average %vº C\n", report.temperature.average())
+	fmt.Printf("average %vº C\n", report.average())
 }
