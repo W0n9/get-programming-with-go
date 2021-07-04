@@ -14,7 +14,7 @@ func main() {
 
 	curiosity := location{-4.5895, 137.4417}
 
-	bytes, err := json.Marshal(curiosity)
+	bytes, err := json.MarshalIndent(curiosity, "", "  ")
 	exitOnError(err)
 
 	fmt.Println(string(bytes))
