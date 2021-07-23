@@ -91,8 +91,13 @@ func validDigit(digit int8) bool {
 }
 
 func (g *Grid) inRow(row int, digit int8) bool {
-	for c := 0; c < columns; c++ {
-		if g[row][c].digit == digit {
+	// for c := 0; c < columns; c++ {
+	// 	if g[row][c].digit == digit {
+	// 		return true
+	// 	}
+	// }
+	for _, v := range g[row] {
+		if v.digit == digit {
 			return true
 		}
 	}
