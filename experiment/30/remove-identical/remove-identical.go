@@ -10,22 +10,34 @@ func sourceGopher(downstream chan string) {
 }
 
 func remove(upstream, downstream chan string) {
-	poor := []string{""}
-
+	poor := make(map[string]bool)
+	// implement by using map
 	for v := range upstream {
-		flag := false
-		for _, j := range poor {
-			if v == j {
-				flag = true
-			}
-		}
-		if !flag {
-			poor = append(poor, v)
+		if _, ok := poor[v]; !ok {
+			poor[v] = false
 			downstream <- v
 		}
 	}
 	close(downstream)
 }
+
+// func remove(upstream, downstream chan string) {
+// 	poor := []string{""}
+
+// 	for v := range upstream {
+// 		flag := false
+// 		for _, j := range poor {
+// 			if v == j {
+// 				flag = true
+// 			}
+// 		}
+// 		if !flag {
+// 			poor = append(poor, v)
+// 			downstream <- v
+// 		}
+// 	}
+// 	close(downstream)
+// }
 
 func print(upstream chan string) {
 	for v := range upstream {
